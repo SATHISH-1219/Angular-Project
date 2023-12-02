@@ -1,0 +1,45 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+      <div class="container-fluid text-light" >
+          <a class="navbar-brand text-light" routerLink="products"><i style="font-size: 30px;" class="fa-brands fa-atlassian">&nbsp; </i>
+              <strong style="font-size: 20px;">A-mart</strong>
+          </a>&nbsp;
+          <p><br>Aston -<span><h6>Martin&nbsp;&nbsp;</h6></span></p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item ">
+              <button routerLink="profile" class="btn btn-dark text-light">
+                  &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user" ></i><strong> Profile</strong>
+              </button>
+            </li>
+            <li class="nav-item ">
+              <button routerLink="cart" class="btn btn-dark text-light">
+                &nbsp;&nbsp;<i  class="fa-solid fa-cart-shopping"></i>
+                  <strong > Cart ({{totalItem}})</strong>
+              </button>
+            </li>
+            <li class="nav-item mt-1">
+              <div class="btn-group">
+                <button class="btn btn-dark dropdown-toggle btn-sm text-light" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-language"></i>
+                  <strong style="font-size: 15px;"><span> Language :</span> {{language}}</strong>
+                </button>
+                <ul class="dropdown-menu" >
+                  <li><a class="dropdown-item" (click)="changeLanguage('en')">English</a></li>
+                  <li><a class="dropdown-item" (click)="changeLanguage('ta')">தமிழ்</a></li>
+                  <li><a class="dropdown-item" (click)="changeLanguage('fr')">Français</a></li>
+                </ul>
+              </div>        
+            </li>
+          </ul>
+      <form class="d-flex col-lg-7">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">
+        <button class="btn btn-dark" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+        </div>
+      </div>
+    </nav>
+</header>

@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    background-image: url("https://img.myloview.com/canvas-prints/dark-abstract-polygonal-presentation-background-with-business-corporate-concept-vector-illustration-design-for-presentation-banner-cover-web-flyer-card-poster-wallpaper-texture-slide-magz-400-210236402.jpg");
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

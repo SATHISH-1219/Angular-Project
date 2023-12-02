@@ -1,0 +1,204 @@
+<div class="row bg-light m-4 p-2">
+    <!--Bill for cart Checkout-->
+    <ng-container *ngIf="productBill == 'cart'">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your cart</span>
+                <span class="badge bg-secondary badge-pill">{{totalItem}}</span>
+            </h4>
+
+            <ul class="list-group mb-3">
+                <li *ngFor="let item of products; let i = index" class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0" style="text-align: justify;">{{ item.title }}</h6>
+                    </div>
+                    <span class="text-muted">&nbsp;₹{{ item.price }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total :</span>
+                    <strong>₹{{ grandTotal }}</strong>
+                </li>
+            </ul>
+        </div>
+    </ng-container>
+    <!--Bill for single product-->
+    <ng-container *ngIf="productBill == 'product'">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Selected Product</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0" style="text-align: justify;">{{ singleProduct.title }}</h6>
+                    </div>
+                    <span class="text-muted">&nbsp;₹{{ singleProduct.price }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <img style="max-width: 150px; height: auto;" src="{{ singleProduct.image }}" alt="">
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Quantity :</span>
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" max="10" [(ngModel)]="quantity"  required>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total :</span>
+                    <strong>₹{{ singleProduct.price*quantity }}</strong>
+                </li>
+            </ul>
+        </div>
+    </ng-container> 
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Billing Address</h4>
+        <!--Name of the User-->
+        <div class="row">
+          <div class="mb-3">
+            <label for="firstName">Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="{{profileData.name}}" disabled>
+          </div>
+        </div>
+        <!--Email User Used for Login-->
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" id="username" placeholder="Username" value="{{profileData.email}}" disabled>
+          </div>
+        </div>
+      <form [formGroup]="billingForm">
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" formControlName="email">
+          <div class="invalid-feedback">
+          </div>
+          <!--Error message for email-->
+          <div *ngIf="billingForm.controls['email'].invalid && (billingForm.controls['email'].dirty || billingForm.controls['email'].touched)" class="alert alert-danger">
+            <div *ngIf="billingForm.controls['email'].errors">
+              Email is <strong>invalid.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" formControlName="address" required>
+          <div *ngIf="billingForm.controls['address'].invalid && (billingForm.controls['address'].dirty || billingForm.controls['address'].touched)" class="alert alert-danger">
+            <div *ngIf="billingForm.controls['address'].errors">
+              Address is <strong>required.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" formControlName="address2">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Country</label>
+            <select class="form-select" id="country" formControlName="country" (change)="countrySelected()" required>
+              <option value="">Choose...</option>
+              <option *ngFor="let country of countriesData" [value]="country.country">{{ country.country }}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">State</label>
+            <select class="form-select" id="state" formControlName="state"  required>
+              <option value="">Choose...</option>
+              <option *ngFor="let state of availableStates" [value]="state">{{ state }}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" placeholder="" formControlName="zip" required>
+            <div class="invalid-feedback">
+              Zip code required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-success btn-lg btn-block" [disabled]="billingForm.invalid" (click)="confirm()" type="submit">Confirm</button>&nbsp;
+            <button class="btn btn-danger btn-lg btn-block" type="reset">Reset Data</button>            
+          </div>
+
+
+        </div>
+        <hr class="mb-4">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="paymentMethod" (change)="paymentMethodCheck()" checked />
+          <label class="form-check-label" for="paymentMethod">Cash on Delivery</label>
+        </div>
+
+        <hr class="mb-4">
+      <div *ngIf="paymentMethod == 'Online'">
+        <h4 class="mb-3">Online Payment</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+            <label class="form-check-label" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="debit">Debit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="paypal">Paypal</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Name of Bank</label>
+            <input type="text"  class="form-control" id="cc-name" placeholder="Bank Name" required>
+            <small class="text-muted">Full name as displayed on card</small>
+            <div class="invalid-feedback">
+              Name on card is required
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Credit card number</label>
+            <input type="text" inputmode="numeric" class="form-control" id="cc-number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+            <div class="invalid-feedback">
+              Credit card number is required
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">Expiration</label>
+            <input type="month" class="form-control" id="cc-expiration" placeholder="" required>
+            <div class="invalid-feedback">
+              Expiration date required
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required>
+            <div class="invalid-feedback">
+              Security code required
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-success btn-lg btn-block" [disabled]="billingForm.invalid" (click)="confirm()" type="submit">Pay</button>&nbsp;
+          <button class="btn btn-danger btn-lg btn-block" type="reset">cancel</button>            
+        </div>
+        <hr class="mb-4">
+      </div>  
+        <button class="btn btn-primary btn-lg btn-block" [disabled]="billingForm.invalid" (click)="confirm()" type="submit">Continue to checkout</button>
+      </form>
+    </div>
+  </div>

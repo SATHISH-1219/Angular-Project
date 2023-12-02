@@ -1,0 +1,253 @@
+[
+    {
+        "title":"Fjallraven - Sac à dos Foldsack No. 1, peut contenir 15 ordinateurs portables",
+        "price":109.00,
+        "description":"Votre sac parfait pour un usage quotidien et des balades en forêt. Rangez votre ordinateur portable (jusqu'à 15 pouces) dans la pochette rembourrée, votre quotidien",
+        "category":"fashion",
+        "subCategory": "bag",
+        "image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    
+    {
+        "title":"T-shirts coupe slim décontractés haut de gamme pour hommes ",
+        "price":122.00,
+        "description":"Style ajusté, manches longues raglan contrastées, patte Henley à trois boutons, tissu léger et doux pour un port respirant et confortable. Chemises cousues solides avec col rond conçues pour plus de durabilité et un ajustement parfait pour les vêtements de mode décontractés et les fans de baseball inconditionnels. L'encolure ronde de style Henley comprend une patte à trois boutons.",
+        "category":"fashion",
+        "subCategory": "T-Shirt",
+        "image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    
+    {
+        "title":"Veste en coton pour hommes",
+        "price":255.00,
+        "description":"Excellentes vestes d'extérieur pour le printemps/automne/hiver, adaptées à de nombreuses occasions, telles que le travail, la randonnée, le camping, l'escalade, le vélo, les voyages ou autres activités de plein air. Bon choix de cadeau pour vous ou un membre de votre famille. Un amour chaleureux pour le père, le mari ou le fils en ce jour de Thanksgiving ou de Noël.",
+        "category":"fashion",
+        "subCategory": "jacket",
+        "image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    
+    {
+        "title":"Coupe slim décontractée pour hommes",
+        "price":75.00,
+        "description":"La couleur peut être légèrement différente entre l’écran et la pratique. / Veuillez noter que la morphologie varie selon les personnes. Par conséquent, les informations détaillées sur les tailles doivent être examinées ci-dessous dans la description du produit.",
+        "category":"fashion",
+        "subCategory": "T-Shirt",
+        "image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    
+    {
+        "title":"John Hardy Legends Naga Bracelet chaîne Dragon Station en or et argent pour femme",
+        "price":695.00,
+        "description":"De notre collection Legends, le Naga s'inspire du mythique dragon d'eau qui protège la perle de l'océan. Portez-le vers l’intérieur pour recevoir de l’amour et de l’abondance, ou vers l’extérieur pour vous protéger.",
+        "category":"jewelery",
+        "subCategory": "bracelet",
+        "image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+    },
+    
+    {
+        "title":"Petit micropavé en or massif ",
+        "price":168.00,
+        "description":"Satisfaction garantie. Retournez ou échangez toute commande dans les 30 jours. Conçu et vendu par Hafeez Center aux États-Unis. Satisfaction garantie. Retournez ou échangez toute commande dans les 30 jours.",
+        "category":"jewelery",
+        "subCategory": "bracelet",
+        "image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+    },
+    
+    {
+        "title":"Princesse Plaquée Or Blanc",
+        "price":499.00,
+        "description":"Bague de promesse de fiançailles en diamant solitaire de mariage classique créée pour elle. Des cadeaux pour gâter davantage votre amour pour des fiançailles, un mariage, un anniversaire, la Saint-Valentin...",
+        "category":"jewelery",
+        "subCategory": "ring",
+        "image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+    },
+    
+    {
+        "title":"Chouette percée en acier inoxydable plaqué or rose double",
+        "price":399.00,
+        "description":"Boucles d'oreilles tunnel évasées doubles plaquées or rose. Fabriqué en acier inoxydable 316L",
+        "category":"jewelery",
+        "subCategory": "ear-ring",
+        "image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+    },
+    
+    {
+        "title":"Disque dur externe portable WD Elements de 2 To - USB 3.0 ",
+        "price":364.00,
+        "description":"Compatibilité USB 3.0 et USB 2.0 Transferts de données rapides Améliore les performances du PC Haute capacité ; Compatibilité NTFS formaté pour Windows 10, Windows 8.1, Windows 7 ; Un reformatage peut être nécessaire pour d'autres systèmes d'exploitation ; La compatibilité peut varier en fonction de la configuration matérielle et du système d'exploitation de l'utilisateur",
+        "category":"electronics",
+        "subCategory": "hdd",
+        "image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+    },
+    
+    {
+        "title":"SSD interne SanDisk SSD PLUS 1 To - SATA III 6 Gb/s",
+        "price":109.00,
+        "description":"Mise à niveau facile pour un démarrage, un arrêt, une charge et une réponse des applications plus rapides (par rapport au disque dur SATA 2,5 5 400 tr/min ; basé sur les spécifications publiées et les tests d'analyse comparative internes utilisant les scores PCMark Vantage) Améliore les performances d'écriture en rafale, ce qui le rend idéal pour les charges de travail PC typiques L'équilibre parfait entre performances et fiabilité Vitesses de lecture/écriture allant jusqu'à 535 Mo/s/450 Mo/s (basé sur des tests internes ; les performances peuvent varier en fonction de la capacité du disque, du périphérique hôte, du système d'exploitation et de l'application.)",
+        "category":"electronics",
+        "subCategory": "ssd",
+        "image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+    },
+    
+    {
+        "title":"Silicon Power SSD 256 Go 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "price":209.00,
+        "description":"Le flash NAND 3D est appliqué pour offrir des vitesses de transfert élevées. Des vitesses de transfert remarquables qui permettent un démarrage plus rapide et des performances globales améliorées du système. La technologie avancée de cache SLC permet d'améliorer les performances et une durée de vie plus longue. Conception mince de 7 mm adaptée aux Ultrabooks et aux ordinateurs portables ultra-minces. Prend en charge la commande TRIM, la technologie Garbage Collection, RAID et ECC (Error Checking & Correction) pour fournir des performances optimisées et une fiabilité améliorée.",
+        "category":"electronics",
+        "subCategory": "ssd",
+        "image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+    },
+    
+    {
+        "title":"Le disque dur de jeu WD 4 To fonctionne avec le disque dur externe portable Playstation 4",
+        "price":114.00,
+        "description":"Développez votre expérience de jeu PS4, jouez n'importe où Installation rapide et facile Conception élégante avec haute capacité, garantie limitée du fabricant de 3 ans",
+        "category":"electronics",
+        "subCategory": "hdd",
+        "image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+    },
+    
+    {
+        "title":"Acer SB220Q bi 21,5 pouces Full HD (1920 x 1080) IPS ultra-mince",
+        "price":599.00,
+        "description":"Écran IPS large Full HD (1920x1080) de 21. 5 pouces et technologie de synchronisation gratuite Radeon. Aucune compatibilité pour le support VESA Taux de rafraîchissement : 75 Hz - Utilisation du port HDMI Conception sans image | ultra-mince | Temps de réponse de 4 ms | Panneau IPS Rapport d'aspect - 16 : 9. Couleurs prises en charge - 16,7 millions de couleurs. Luminosité – 250 nits. Angle d'inclinaison – 5 degrés à 15 degrés. Angle de vision horizontal-178 degrés. Angle de vision vertical : 178 degrés 75 hertz",
+        "category":"electronics",
+        "subCategory": "monitor",
+        "image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+    },
+    
+    {
+        "title":"Moniteur de jeu incurvé Samsung CHG90 49 pouces 144 Hz (LC49HG90DMNXZA) - Écran super ultra-large QLED",
+        "price":999.00,
+        "description":"MONITEUR DE JEU INCURVÉ SUPER ULTRA-LARGE 32:9 DE 49 POUCES avec double écran de 27 pouces côte à côte TECHNOLOGIE QUANTUM DOT (QLED), prise en charge HDR et calibrage en usine offrant des couleurs et un contraste incroyablement réalistes et précis. TAUX DE RAFRAÎCHISSEMENT ÉLEVÉ DE 144 Hz et temps de réponse ultra rapide de 1 ms éliminez le flou de mouvement, les images fantômes et réduisez le décalage d'entrée",
+        "category":"electronics",
+        "subCategory": "monitor",
+        "image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+    },
+    
+    {
+        "title":"BIYLACLESEN Veste de snowboard 3 en 1 pour femme Manteaux d'hiver",
+        "price":256.00,
+        "description":"Remarque : les vestes sont de taille standard américaine, veuillez choisir la taille comme votre tenue habituelle. Matériau : 100 % polyester ; Tissu de doublure amovible : polaire chaude. Doublure fonctionnelle amovible : douce pour la peau, légère et chaude. Veste à col montant, vous garde au chaud par temps froid. Poches zippées : 2 poches zippées pour les mains, 2 poches zippées sur la poitrine (assez pour ranger des cartes ou des clés) et 1 poche cachée à l'intérieur. Les poches zippées pour les mains et la poche cachée gardent vos affaires en sécurité. Conception humanisée : capuche réglable et amovible et poignets réglables pour empêcher le vent et l'eau, pour un ajustement confortable. Le design détachable 3 en 1 offre plus de commodité, vous pouvez séparer le manteau et l'intérieur selon vos besoins, ou le porter ensemble. Il convient à différentes saisons et vous aide à vous adapter à différents climats",
+        "category":"fashion",
+        "subCategory": "jacket",
+        "image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+    },
+    
+    {
+        "title":"Lock and Love Veste de motard à capuche amovible en simili cuir pour femme",
+        "price":429.00,
+        "description":"100 % POLYURÉTHANE (coquille) 100 % POLYESTER (doublure) 75 % POLYESTER 25 % COTON (PULL), Matériau en simili cuir pour le style et le confort / 2 poches sur le devant, Veste en simili cuir à capuche style denim 2 pour un, Détail boutonné sur taille / Coutures détaillées sur les côtés, LAVER À LA MAIN UNIQUEMENT / NE PAS JAVELLER / SÉCHER À L'EXTÉRIEUR / NE PAS REPASSER",
+        "category":"fashion",
+        "subCategory": "jacket",
+        "image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+    },
+    
+    {
+        "title":"Veste de pluie femme coupe-vent rayé imperméables d'escalade",
+        "price":239.00,
+        "description":"Léger, parfait pour les voyages ou les vêtements décontractés --- Manches longues avec capuche et cordon de serrage réglable à la taille. Imperméable à fermeture boutonnée et zippée sur le devant, entièrement doublé à rayures et l'imperméable a 2 poches latérales de bonne taille pour contenir toutes sortes de choses, il couvre les hanches et la capuche est généreuse mais n'en fait pas trop. Capuche doublée en coton attachée avec Les cordons de serrage réglables lui donnent un véritable look stylé.",
+        "category":"fashion",
+        "subCategory": "jacket",
+        "image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+    },
+    
+    {
+        "title":"MBJ Femme Solide Manches Courtes Col Bateau V",
+        "price":119.00,
+        "description":"95 % RAYONNE 5 % SPANDEX, Fabriqué aux États-Unis ou importé, Ne pas utiliser d'eau de Javel, Tissu léger très extensible pour plus de confort, Manches et encolure côtelés / Double couture sur l'ourlet inférieur",
+        "category":"fashion",
+        "subCategory": "T-shirt",
+        "image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+    },
+    
+    {
+        "title":"Opna Sweat-shirt anti-humidité à manches courtes pour femme",
+        "price":117.00,
+        "description":"100 % polyester, lavage en machine, interlock 100 % polyester cationique, lavage en machine et pré-rétréci pour un ajustement parfait, léger, spacieux et hautement respirant avec un tissu évacuant l'humidité qui aide à éloigner l'humidité, tissu doux et léger avec col en V confortable et une coupe plus fine, offre une silhouette élégante et plus féminine et un confort supplémentaire",
+        "category":"fashion",
+        "subCategory": "T-Shirt",
+        "image":"https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+    },
+    
+    {
+        "title":"DANVOUY T-shirt court décontracté en coton pour femme",
+        "price":92.00,
+        "description":"95 % coton, 5 % élasthanne, Caractéristiques : décontracté, manches courtes, lettre imprimée, col en V, t-shirts tendance, le tissu est doux et légèrement extensible., Occasion : décontracté/bureau/plage/école/maison/rue. Saison : printemps, été, automne, hiver.",
+        "category":"fashion",
+        "subCategory": "T-shirt",
+        "image":"https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    },
+    
+    {
+        "title":"Chemise décontractée en coton pour hommes",
+        "price":192.00,
+        "description":"95 % coton, 5 % élasthanne, Caractéristiques : décontracté, manches courtes, lettre imprimée, col en V, t-shirts tendance, le tissu est doux et légèrement extensible., Occasion : décontracté/bureau/plage/école/maison/rue. Saison : printemps, été, automne, hiver.",
+        "category":"fashion",
+        "subCategory": "shirt",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9-spAiTs6GWb7lt5tgrBvMfhycpClujOeDw&usqp=CAU"
+    },
+    
+    {
+        "title":"Chemise décontractée en coton pour femme",
+        "price":92.00,
+        "description":"95 % coton, 5 % élasthanne, Caractéristiques : décontracté, manches courtes, lettre imprimée, col en V, t-shirts tendance, le tissu est doux et légèrement extensible., Occasion : décontracté/bureau/plage/école/maison/rue. Saison : printemps, été, automne, hiver.",
+        "category":"fashion",
+        "subCategory": "shirt",
+        "image":"https://uniformtailor.in/image/cache/catalog/data/hospitality-uniforms/receptionist/wt001-logo-img3-white-670x760.jpg"
+    },
+    
+    {
+        "title":"Disque dur Samsung",
+        "price":1192.00,
+        "description":"Compatibilité USB 3.0 et USB 2.0 Transferts de données rapides Améliore les performances du PC Haute capacité ; Compatibilité NTFS formaté pour Windows 10, Windows 8.1, Windows 7 ; Un reformatage peut être nécessaire pour d'autres systèmes d'exploitation ; La compatibilité peut varier en fonction de la configuration matérielle et du système d'exploitation de l'utilisateur",
+        "category":"electronics",
+        "subCategory": "hdd",
+        "image":"https://m.media-amazon.com/images/I/31pLuKdxJFL._SY300_SX300_QL70_FMwebp_.jpg"
+    },
+    
+    {
+        "title":"SSD Sandisk",
+        "price":992.00,
+        "description":"Mise à niveau facile pour un démarrage, un arrêt, une charge et une réponse des applications plus rapides (par rapport au disque dur SATA 2,5 5 400 tr/min ; basé sur les spécifications publiées et les tests d'analyse comparative internes utilisant les scores PCMark Vantage) Améliore les performances d'écriture en rafale, ce qui le rend idéal pour les charges de travail PC typiques L'équilibre parfait entre performances et fiabilité Vitesses de lecture/écriture allant jusqu'à 535 Mo/s/450 Mo/s (basé sur des tests internes ; les performances peuvent varier en fonction de la capacité du disque, du périphérique hôte, du système d'exploitation et de l'application.)",
+        "category":"electronics",
+        "subCategory": "ssd",
+        "image":"https://m.media-amazon.com/images/I/61zuR3UMnWL._SY879_.jpg"
+    },
+    
+    {
+        "title":"Boucles d'oreilles pendantes avec pierres précieuses Aakriti",
+        "price":1599.00,
+        "description":"Boucles d'oreilles tunnel évasées doubles plaquées or rose. Fabriqué en acier inoxydable 316L",
+        "category":"jewelery",
+        "subCategory": "ear-ring",
+        "image":"https://cdn.caratlane.com/media/catalog/product/J/E/JE07643-1RP9OO_1_lar.jpg"
+    },
+    
+    {
+        "title":"Jhumkas en diamant à parchemin et en perles",
+        "price":1399.00,
+        "description":"Boucles d'oreilles tunnel évasées doubles plaquées or rose. Fabriqué en acier inoxydable 316L",
+        "category":"jewelery",
+        "subCategory": "ear-ring",
+        "image":"https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_1_lar.jpg"
+    },
+    
+    {
+        "title":"Bracelet à diamants Celebration Bloom",
+        "price":3399.00,
+        "description":"Boucles d'oreilles tunnel double évasées en diamant. Fabriqué en acier inoxydable 316L",
+        "category":"jewelery",
+        "subCategory": "bracelet",
+        "image":"https://cdn.caratlane.com/media/catalog/product/J/T/JT01138-1YP6ED_1_lar.jpg"
+    },
+    
+    {
+        "title":"Bague solitaire classique danoise",
+        "price":2399.00,
+        "description":"Boucles d'oreilles tunnel double évasées en diamant. Fabriqué en acier inoxydable 316L",
+        "category":"jewelery",
+        "subCategory": "ring",
+        "image":"https://cdn.caratlane.com/media/catalog/product/S/R/SR02176-WGP900_1_lar.jpg"
+    }
+    ]

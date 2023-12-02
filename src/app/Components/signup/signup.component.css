@@ -1,0 +1,15 @@
+
+.mat-datepicker-main-block{
+    position: relative;}
+    mat-datepicker-toggle{
+      position: absolute;
+      right:0;
+      top: -8px;
+    }
+  
+  .form{
+    border: 2px solid gray;
+  }
+  .spaced-label {
+    margin-right: 20%; /* Adjust the value to control the spacing */
+  }

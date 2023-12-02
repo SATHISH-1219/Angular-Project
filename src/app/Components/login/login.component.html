@@ -1,0 +1,50 @@
+<div class="container p-5 my-5 bg-light col-lg-4 " >
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <table style="border-collapse: separate; border-spacing: 0 15px;">
+          <tr>
+              <td>
+                  <label for="email"><i class="fa-solid fa-envelope"></i> {{ 'EMAIL_LABEL' | translate }}*</label>
+              </td>
+              <td>
+                  <input type="email" class="form-control" id="email" placeholder="{{ 'ENTER_NEW_EMAIL' | translate }}" formControlName="email">
+                  
+                  <!--Error message for email-->
+                  <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="alert alert-danger">
+                      <div *ngIf="loginForm.controls['email'].errors">
+                        {{ 'EMAIL_INVALID' | translate }}
+                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label for="password"><i class="fa-solid fa-lock"></i> {{ 'PASSWORD_LABEL' | translate }}* :</label>
+              </td>
+              <td>
+                  <input type="password" class="form-control" id="password" placeholder="{{ 'ENTER_PASSWORD' | translate }}" formControlName="password">
+                  
+                  <!--Error message for password-->
+                  <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
+                      <div *ngIf="loginForm.controls['password'].errors">
+                        {{ 'PASSWORD_INVALID' | translate }}                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+                <button class="btn btn-link btn-sm" type="button" routerLink="/forgetpswd">{{ 'FORGET_PASSWORD' | translate }}?</button>
+            </td>
+        </tr>
+      </table>
+      
+      <!--SUbmit form-->
+      <div class="d-grid my-2">
+          <button type="submit" class="btn btn-dark btn-sm btn-block" [disabled]="loginForm.invalid">{{ 'SUBMIT' | translate }}</button><br>
+      </div>
+  </form>
+  
+  <span>{{ 'NEW_USER' | translate }} </span>
+  <!--Signup link-->
+  <button class="btn btn-link btn-sm" routerLink="/signup">{{ 'SIGNUP_LINK' | translate }}</button>
+</div>  

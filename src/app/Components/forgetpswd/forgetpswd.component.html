@@ -1,0 +1,44 @@
+<div class="container p-5 my-5 bg-light" style="width:395px">
+    <form [formGroup]="forgetForm" (ngSubmit)="checkUser()">
+        <table style="border-collapse: separate; border-spacing: 0 15px;">
+            <tr>
+                <td>
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email* : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </td>
+                <td>
+                    <input type="email" id="email" placeholder="Enter Your Email" formControlName="email">
+                    
+                    <!--Error message for email-->
+                    <div *ngIf="forgetForm.controls['email'].invalid && (forgetForm.controls['email'].dirty || forgetForm.controls['email'].touched)" class="alert alert-danger">
+                        <div *ngIf="forgetForm.controls['email'].errors">
+                          Email Is <strong>Invalid.</strong>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+        <!--SUbmit form-->
+        <div class="d-grid my-2">
+            <button type="submit" class="btn btn-dark btn-sm btn-block" [disabled]="forgetForm.controls['email'].invalid">Change Password</button><br>
+        </div>
+        <div class="d-grid my-2" *ngIf="inputVisible">
+            <input type="password" id="password" placeholder="Enter Your New Password" formControlName="password">
+            <!--Error message for password-->
+            <div *ngIf="forgetForm.controls['password'].invalid && (forgetForm.controls['password'].dirty || forgetForm.controls['password'].touched)" class="alert alert-danger">
+                <div *ngIf="forgetForm.controls['password'].hasError('required')">
+                    Password Is <strong>Required.</strong>
+                </div>
+                <span *ngIf="forgetForm.controls['password'].hasError('weakPassword')">
+                    Password is too weak. It should contain at least 8 characters, including one lowercase letter, one uppercase letter, one digit, and one special character. 
+                </span>
+            </div>  
+            <button class="btn btn-block btn-dark btn-sm" (click)="updatePassword()" [disabled]="forgetForm.controls['password'].invalid" >Update Password</button>
+        </div>    
+    </form>
+    
+    
+    <span>New User </span>
+    <!--Signup link-->
+    <button class="btn btn-link btn-sm" routerLink="/signup">Signup</button>
+</div>  

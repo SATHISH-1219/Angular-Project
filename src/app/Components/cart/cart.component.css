@@ -1,0 +1,23 @@
+.card {
+    margin: 25px;
+    padding: 25px;
+}
+
+.center img {
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+}
+
+h4,
+h6 {
+    font-weight: 400;
+}
+
+
+
+
+
+
+

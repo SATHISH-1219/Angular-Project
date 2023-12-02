@@ -1,0 +1,175 @@
+<div class="container p-4 bg-light" style="max-width: 500px;">
+  <form [formGroup]="userForm" (ngSubmit)="signUp()">
+    <!-- First Name Field -->
+    <div class="form-group mt-3">
+        <label for="firstName">{{ 'FIRST_NAME_LABEL' | translate }}<span class="text-danger">*</span></label>
+        <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="{{ 'FIRST_NAME_LABEL' | translate }}" required>
+        <!-- Validation Error Messages for First Name -->
+        <div *ngIf="userForm.controls['firstName'].invalid && (userForm.controls['firstName'].dirty || userForm.controls['firstName'].touched)" class="alert alert-danger" >
+          <div *ngIf="userForm.controls['firstName'].hasError('required')">
+            {{ 'FIRST_NAME_LABEL' | translate }}          
+          </div>
+          <span *ngIf="userForm.controls['firstName'].hasError('minlength')">
+            {{ 'FIRST_NAME_LABEL' | translate }}          
+          </span>
+        </div>
+    </div>
+
+    <!-- Last Name Field -->
+    <div class="form-group mt-3">
+        <label for="lastName">{{ 'LAST_NAME_LABEL' | translate }}<span class="text-danger">*</span></label>
+        <input type text id="lastName" formControlName="lastName" class="form-control" placeholder="{{ 'ENTER_LAST_NAME' | translate }}" required>
+        <!-- Validation Error Messages for Last Name -->
+        <div *ngIf="userForm.controls['lastName'].invalid && (userForm.controls['lastName'].dirty || userForm.controls['lastName'].touched)" class="alert alert-danger">
+          <div *ngIf="userForm.controls['lastName'].hasError('required')">
+            {{ 'LAST_NAME_REQUIRED' | translate }}          
+          </div>
+        </div>
+    </div> 
+
+    <!-- Gender Field -->
+    <div class="form-group mt-3">
+      <label for="gender">{{ 'GENDER_LABEL' | translate }}<span class="text-danger">*</span></label>
+      &nbsp;
+      <div class="form-check form-check-inline">
+        <input type="radio" id="male" value="Male" formControlName="gender" class="form-check-input" required>
+        <label for="male" class="form-check-label spaced-label">{{ 'MALE' | translate }}</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" id="female" value="Female" formControlName="gender" class="form-check-input">
+        <label for="female" class="form-check-label">{{ 'FEMALE' | translate }}</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" id="others" value="Others" formControlName="gender" class="form-check-input">
+        <label for="others" class="form-check-label">{{ 'OTHERS' | translate }}</label>
+      </div>
+      <!-- Validation Error Messages for Gender -->
+      <div *ngIf="userForm.controls['gender'].invalid && (userForm.controls['gender'].dirty || userForm.controls['gender'].touched)" class="alert alert-danger" >
+        <div *ngIf="userForm.controls['gender'].hasError('required')">
+          {{ 'GENDER_REQUIRED' | translate }}        
+        </div>
+        </div>
+    </div>
+
+  <!-- Date of Birth Field with Material Date Picker -->
+  <div class="form-group mt-3">
+    <label for="dateOfBirth">{{ 'DATE_OF_BIRTH_LABEL' | translate }}<span class="text-danger">*</span></label>
+    <div class="mat-datepicker-main-block">
+      <input matInput [matDatepicker]="Date"  [max]="todayDate" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" placeholder="MM/DD/YYYY" required>
+      <mat-datepicker-toggle matIconSuffix [for]="Date"></mat-datepicker-toggle>
+      <mat-datepicker #Date></mat-datepicker>
+    </div>
+    <div *ngIf="userForm.controls['dateOfBirth'].invalid && (userForm.controls['dateOfBirth'].dirty || userForm.controls['dateOfBirth'].touched)" class="alert alert-danger">
+      <div *ngIf="userForm.controls['dateOfBirth'].hasError('required')">
+        {{ 'DATE_OF_BIRTH_REQUIRED' | translate }}      
+      </div>
+    </div>
+  </div>    
+    
+    <!-- Email Field -->
+    <div class="form-group mt-3">
+        <label for="email">{{ 'EMAIL_LABEL' | translate }}<span class="text-danger">*</span></label>
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="{{ 'ENTER_EMAIL' | translate }}" required>
+        <!-- Validation Error Messages for Email -->
+        <div *ngIf="(userForm.controls['email'].invalid && userForm.controls['email'].dirty)" class="alert alert-danger">
+          <div *ngIf="userForm.controls['email'].errors">
+            {{ 'EMAIL_INVALID' | translate }}          
+          </div>
+      </div>
+    </div>
+
+    <!-- Country Code Dropdown -->
+    <div class="form-group mt-3">
+      <label for="countryCode">{{ 'COUNTRY_LABEL' | translate }}<span class="text-danger">*</span></label>
+
+        <input matInput
+               aria-label="State" id="state"
+               [matAutocomplete]="auto"
+               [formControl]="countryCtrl"
+               class="form-control"
+               placeholder="{{ 'CHOOSE_COUNTRY' | translate }}" required>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let state of filteredStates| async"  [value]="state.name">
+            {{state.name}}
+          </mat-option>
+        </mat-autocomplete>
+      <div *ngIf="countryCtrl.invalid && (countryCtrl.dirty || countryCtrl.touched)" class="alert alert-danger">
+        <div *ngIf="countryCtrl.hasError('required')">
+          {{ 'COUNTRY_REQUIRED' | translate }}        
+        </div>
+      </div>
+    </div>
+
+    <div class="orm-group mt-3">
+      <label for="state">{{ 'STATE_LABEL' | translate }}</label>
+      <select class="form-select" id="state" formControlName="state"  required>
+        <option value="" selected>{{ 'CHOOSE' | translate }}</option>
+        <option *ngFor="let state of availableStates" [value]="state" class="form-select-input">{{ state }}</option>
+      </select>
+      <div *ngIf="userForm.controls['state'].invalid && (userForm.controls['state'].dirty || userForm.controls['state'].touched)" class="alert alert-danger">
+        <div *ngIf="userForm.controls['state'].hasError('required')">
+          {{ 'STATE_REQUIRED' | translate }}        
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Number Field -->
+    <div class="form-group mt-3">
+        <label for="phoneNumber">{{ 'PHONE_NUMBER_LABEL' | translate }}<span class="text-danger">*</span></label>
+        <div class="input-group">
+          <div class="input-group-prepend " >
+            <span class="input-group-text">{{ countryCode }}</span>
+          </div>
+          <input type="tel" id="phoneNumber" formControlName="phoneNumber" class="form-control" placeholder="{{ 'ENTER_PHONE_NUMBER' | translate }}" required>
+        </div>
+        <!-- Validation Error Messages for Phone Number -->
+        <div *ngIf="userForm.controls['phoneNumber'].invalid && (userForm.controls['phoneNumber'].dirty || userForm.controls['phoneNumber'].touched)" class="alert alert-danger">
+          <div *ngIf="userForm.controls['phoneNumber'].hasError('required')">
+            {{ 'PHONE_NUMBER_REQUIRED' | translate }}          
+          </div>
+          <div *ngIf="userForm.controls['phoneNumber'].hasError('pattern')">
+            {{ 'PHONE_NUMBER_INVALID' | translate }}          
+          </div>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="password">{{ 'PASSWORD_LABEL' | translate }}<span class="text-danger">*</span></label>
+      <input type="password" id="password" placeholder="{{ 'ENTER_PASSWORD' | translate }}" class="form-control" formControlName="password" required>
+      <!-- Validation Error Messages for Email -->
+      <div *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)" class="alert alert-danger" >
+        <div *ngIf="userForm.controls['password'].hasError('required')">
+          {{ 'PASSWORD_REQUIRED' | translate }}        
+        </div>
+        <span *ngIf="userForm.controls['password'].hasError('weakPassword')">
+          {{ 'WEAK_PASSWORD_ERROR' | translate }}        
+        </span>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="retypePassword">{{ 'CONFIRM_PASSWORD_LABEL' | translate }}<span class="text-danger">*</span></label>
+      <input type="Password" id="retypePassword" placeholder="{{ 'ENTER_CONFIRM_PASSWORD' | translate }}" class="form-control" formControlName="retypePassword" required>
+      <!-- Validation Error Messages for Email -->
+        <div *ngIf="userForm.controls['retypePassword'].invalid && (userForm.controls['retypePassword'].dirty || userForm.controls['retypePassword'].touched)" class="alert alert-danger">
+          <div *ngIf="userForm.controls['retypePassword'].hasError('required')">
+            {{ 'CONFIRM_PASSWORD_REQUIRED' | translate }}          
+          </div>
+          <span *ngIf="userForm.controls['retypePassword'].hasError('passwordMismatch')">
+            {{ 'PASSWORD_MISMATCH_ERROR' | translate }}          
+          </span>
+        </div>
+    </div>
+      <!--SUbmit form-->
+      <br>
+      <div class="d-grid">
+        <button type="reset" class="btn btn-dark btn-sm btn-block" >{{ 'RESET_BUTTON' | translate }}</button>
+      </div><br>
+      <div class="d-grid">
+          <button type="submit" class="btn btn-dark btn-sm btn-block" [disabled]="userForm.invalid">{{ 'SUBMIT_BUTTON' | translate }}</button><br>
+      </div>
+  </form>
+  <span>{{ 'EXISTING_ACCOUNT_TEXT' | translate }} </span>
+  <!--Login link-->
+  <button class="btn btn-link btn-sm " routerLink="/login">{{ 'LOGIN_LINK' | translate }}</button>
+</div>

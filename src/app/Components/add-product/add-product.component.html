@@ -1,0 +1,87 @@
+<div class="container bg-light p-5 center">
+    <div class="order-md-1">
+        <h4 class="mb-3">Add New Product</h4>
+        <form [formGroup]="addProductForm">
+
+          <!--Title of the product-->
+          <div class="row">
+            <div class="mb-3">
+              <label for="title">Product Title</label>
+              <input type="text" class="form-control" id="title" placeholder="Enter the product title" value="" formControlName="title" >
+              <div *ngIf="addProductForm.controls['title'].invalid && (addProductForm.controls['title'].dirty || addProductForm.controls['title'].touched)" class="alert alert-danger">
+                <div *ngIf="addProductForm.controls['title'].errors">
+                  Title is <strong>Required.</strong>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <!--Product Price-->
+          <div class="mb-3">
+            <label for="price">Product Price</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">₹</span>
+              </div>
+              <input type="text" class="form-control" id="price" placeholder="Enter Product Price" formControlName="price" >
+              <div class="invalid-feedback">
+              </div>
+            </div>
+            <div *ngIf="addProductForm.controls['price'].invalid && (addProductForm.controls['price'].dirty || addProductForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="addProductForm.controls['price'].errors">
+                  Price is <strong>Required.</strong>
+                </div>
+            </div>
+          </div>
+    
+          <div class="mb-3">
+            <label for="email">Description</label>
+            <textarea name="description" class="form-control" id="description" cols="30" rows="5" formControlName="description"></textarea>
+            <div class="invalid-feedback">
+            </div>
+            <!--Error message for description-->
+            <div *ngIf="addProductForm.controls['description'].invalid && (addProductForm.controls['description'].dirty || addProductForm.controls['description'].touched)" class="alert alert-danger">
+              <div *ngIf="addProductForm.controls['description'].errors">
+                Description is <strong>Required.</strong>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="category">Category</label>
+              <select class="form-select" id="category" formControlName="category" (change)="categorySelected()" required>
+                <option value="">Choose...</option>
+                <option *ngFor="let category of category" [value]="category.category">{{ category.category }}</option>
+             </select>
+             <div *ngIf="addProductForm.controls['category'].invalid && (addProductForm.controls['category'].dirty || addProductForm.controls['category'].touched)" class="alert alert-danger">
+              <div *ngIf="addProductForm.controls['category'].errors">
+                Please provide a valid <strong>category.</strong>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="subCategory">Sub Category</label>
+              <select class="form-select" id="subCategory" formControlName="subCategory"  required>
+                <option value="">Choose...</option>
+                <option *ngFor="let subCategory of availableSubCategory" [value]="subCategory">{{ subCategory }}</option>
+              </select>
+              <div *ngIf="addProductForm.controls['subCategory'].invalid && (addProductForm.controls['subCategory'].dirty || addProductForm.controls['subCategory'].touched)" class="alert alert-danger">
+                <div *ngIf="addProductForm.controls['subCategory'].errors">
+                  Please provide a valid <strong>Sub Category.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="image">Image Source</label>
+              <input type="text" class="form-control" id="image" placeholder="" formControlName="image" required>
+              <div *ngIf="addProductForm.controls['image'].invalid && (addProductForm.controls['image'].dirty || addProductForm.controls['image'].touched)" class="alert alert-danger">
+                <div *ngIf="addProductForm.controls['image'].errors">
+                  Image Source is <strong>Required.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-success btn-lg btn-block" [disabled]="addProductForm.invalid" (click)="confirm()" type="submit">Confirm</button>&nbsp;
+              <button class="btn btn-danger btn-lg btn-block" type="reset">Reset Data</button>            
+            </div>    
+</div>

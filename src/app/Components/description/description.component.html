@@ -1,0 +1,22 @@
+<div class="container bg-white my-3">
+
+    <div class="row">
+        <div class="container col-lg-6 col-md-6 col-sm-6 col-12 border border-0">
+            <div class="card p-3">
+                <img src="{{product.image}}"  routerLink="/description"  alt="" style="height:300px; width: 200px; margin-left: auto; margin-right: auto;">
+            </div>   
+        </div>
+        <div class="container col-lg-6 col-md-6 col-sm-6 col-12 ">
+            <div class="card p-3">
+            <h4>{{product.title}}</h4>
+            <p  style="min-height: 87px; text-align: justify;">{{product.description}}</p>
+            <p><strong>Price:</strong> ₹{{product.price}}</p>
+            <button class="btn btn-secondary" (click)="buyNow(product)">Buy Now</button>
+            <button class="btn btn-dark my-2" (click)="addtocart(product)" >Add to cart</button>
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+
